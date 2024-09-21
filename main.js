@@ -133,8 +133,10 @@ class GameScene extends Phaser.Scene {
     }
 }
 
+const gameCanvas = document.getElementById("gameCanvas");
+
 const config = {
-    type: Phaser.WEBGL,
+    type: Phaser.CANVAS,  
     width: sizes.width,
     height: sizes.height,
     canvas: gameCanvas,
@@ -146,6 +148,10 @@ const config = {
         },
     },
     scene: [GameScene],
+    scale: {
+        mode: Phaser.Scale.FIT,         
+        autoCenter: Phaser.Scale.CENTER_BOTH  
+    }
 }
 
 const game = new Phaser.Game(config)
