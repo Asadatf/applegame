@@ -1,4 +1,4 @@
-import 'style.css';
+import './style.css';
 import Phaser from 'phaser';
 
 const sizes = {
@@ -132,6 +132,8 @@ class GameScene extends Phaser.Scene {
         gameEndDiv.style.display = "flex"
     }
 }
+
+const gameCanvas = document.getElementById("gameCanvas");
 
 const config = {
     type: Phaser.WEBGL,
